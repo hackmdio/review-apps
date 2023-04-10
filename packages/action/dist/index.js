@@ -14847,7 +14847,7 @@ const hardReset = function hardReset(branch) {
     return __awaiter(this, void 0, void 0, function* () {
         yield (0, exec_1.exec)('git', ['fetch', 'origin', branch]);
         yield (0, exec_1.exec)('git', ['checkout', '-f', branch]);
-        yield (0, exec_1.exec)('git', ['reset', '--hard', 'origin/' + branch]);
+        yield (0, exec_1.exec)('git', ['reset', '--hard', 'FETCH_HEAD']);
     });
 };
 exports.hardReset = hardReset;
