@@ -18,7 +18,7 @@ export const configure = async function configure({
 export const hardReset = async function hardReset(branch: string) {
   await exec('git', ['fetch', 'origin', branch]);
   await exec('git', ['checkout', '-f', branch]);
-  await exec('git', ['reset', '--hard', 'origin/' + branch]);
+  await exec('git', ['reset', '--hard', 'FETCH_HEAD']);
 };
 
 export function decorateMessage(message: string) {
